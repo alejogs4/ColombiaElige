@@ -2,7 +2,7 @@ package com.app.web.ags.colombiaelige.database;
 
 public class SqlConstants {
 
-    public static final String DATABASE_NAME = "votacionescolombia";
+    public static final String DATABASE_NAME = "votaciones";
 
     /** Tables **/
     public static final String VOTERS_TABLE = "CREATE TABLE voters (" +

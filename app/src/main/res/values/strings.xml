@@ -3,4 +3,9 @@
     <string name="vote_text">Votar</string>
     <string name="register_candidate">Registrar candidato</string>
     <string name="register_citizen">Registrar ciudadano</string>
+    <string-array name="types">
+        <item>Presidencial</item>
+        <item>Gobernacion</item>
+        <item>Alcalde</item>
+    </string-array>
 </resources>

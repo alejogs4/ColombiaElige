@@ -20,11 +20,19 @@
         <item name="android:layout_width">300dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginTop">10dp</item>
     </style>
     <style name="editText">
         <item name="android:layout_width">300dp</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="candidateCard">
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
 </resources>

@@ -10,6 +10,7 @@ import com.app.web.ags.colombiaelige.R;
 public class MainActivity extends AppCompatActivity {
 
     private Button openRegistryCandidateButton;
+    private Button openVoteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +22,14 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this,RegisterCandidate.class);
             startActivity(intent);
         });
+        openVoteButton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this,SelectVote.class);
+            startActivity(intent);
+        });
     }
 
     private void connect() {
         openRegistryCandidateButton = findViewById(R.id.register_candidate_button);
+        openVoteButton = findViewById(R.id.vote_button);
     }
 }

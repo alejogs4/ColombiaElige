@@ -54,7 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"></Spinner>
+        android:layout_marginBottom="20dp"
+        android:entries="@array/types"></Spinner>
     <Button
         android:id="@+id/register_candidate_execute"
         style="@style/buttonsStyle"

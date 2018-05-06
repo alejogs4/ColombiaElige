@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Seleccione el cargo por el cual votara"
+        android:textColor="@color/primaryText"
+        android:textSize="26dp"/>
+    <Button
+        android:id="@+id/president_button"
+        style="@style/buttonsStyle"
+        android:text="Elecciones presidenciales"/>
+    <Button
+        android:id="@+id/governator_button"
+        style="@style/buttonsStyle"
+        android:text="Elecciones para gobernador"/>
+    <Button
+        android:id="@+id/mayor_button"
+        style="@style/buttonsStyle"
+        android:text="Elecciones para alcalde"/>
+</LinearLayout>
