@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Colombia Elige</string>
+    <string name="vote_text">Votar</string>
+    <string name="register_candidate">Registrar candidato</string>
+    <string name="register_citizen">Registrar ciudadano</string>
 </resources>

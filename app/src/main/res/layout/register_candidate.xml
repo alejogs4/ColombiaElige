@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar candidatos"
+        android:textColor="@color/primaryText"
+        android:textSize="36dp"
+        android:layout_gravity="center_horizontal"/>
+    <android.support.design.widget.TextInputLayout
+        style="@style/editTextStyle">
+        <EditText
+            android:id="@+id/dni_candidate_field"
+            style="@style/editText"
+            android:hint="Dni"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        style="@style/editTextStyle">
+        <EditText
+            android:id="@+id/name_candidate_field"
+            style="@style/editText"
+            android:hint="Nombre"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        style="@style/editTextStyle">
+        <EditText
+            android:id="@+id/lastname_candidate_field"
+            style="@style/editText"
+            android:hint="Apellido"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        style="@style/editTextStyle">
+        <EditText
+            android:id="@+id/party_candidate_field"
+            style="@style/editText"
+            android:hint="Partido politico"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        style="@style/editTextStyle">
+        <EditText
+            android:id="@+id/image_candidate_field"
+            style="@style/editText"
+            android:hint="URL de la imagen"/>
+    </android.support.design.widget.TextInputLayout>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"></Spinner>
+    <Button
+        android:id="@+id/register_candidate_execute"
+        style="@style/buttonsStyle"
+        android:text="Registrar"/>
+</LinearLayout>
+</ScrollView>
