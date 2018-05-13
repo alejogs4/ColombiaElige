@@ -13,14 +13,12 @@ public class SqlConstants {
             "name text NOT NULL," +
             "lastname text NOT NULL," +
             "politic_party text NOT NULL," +
-            "image text NOT NULL," +
-            "type text NOT NULL)";
+            "image text NOT NULL)";
 
     public static final String VOTES_TABLE = "CREATE TABLE votes (" +
             "id integer primary key autoincrement," +
             "dni text," +
             "cedula text," +
-            "type text NOT NULL," +
             "FOREIGN KEY(dni) REFERENCES candidates(dni)," +
             "FOREIGN KEY(cedula) REFERENCES voters(cedula)" +
             ")";

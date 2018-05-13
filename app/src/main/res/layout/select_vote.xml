@@ -1,25 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:orientation="vertical"
+    android:padding="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Seleccione el cargo por el cual votara"
+        android:layout_marginTop="30dp"
+        android:text="Votaciones presidenciales de Colombia"
         android:textColor="@color/primaryText"
-        android:textSize="26dp"/>
+        android:textSize="26dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <EditText
+            android:id="@+id/citizen_dni"
+            style="@style/editTextStyle"
+            android:layout_marginTop="20dp"
+            android:hint="Ingresa tu cedula" />
+    </android.support.design.widget.TextInputLayout>
+
     <Button
         android:id="@+id/president_button"
         style="@style/buttonsStyle"
-        android:text="Elecciones presidenciales"/>
-    <Button
-        android:id="@+id/governator_button"
-        style="@style/buttonsStyle"
-        android:text="Elecciones para gobernador"/>
-    <Button
-        android:id="@+id/mayor_button"
-        style="@style/buttonsStyle"
-        android:text="Elecciones para alcalde"/>
+        android:layout_marginTop="50dp"
+        android:text="Realizar voto" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="40dp">
+        <ImageView
+            android:id="@+id/statics_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/estadistica"/>
+
+        <TextView
+            android:id="@+id/statistics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@id/statics_image"
+            android:text="Mostrar estadisticas"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+
 </LinearLayout>

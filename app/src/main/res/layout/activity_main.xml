@@ -13,6 +13,8 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:contentDescription="ColombiaElige"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
         android:src="@drawable/logo"
         android:visibility="visible"
         app:srcCompat="@drawable/logo" />
@@ -32,9 +34,5 @@
         android:id="@+id/register_candidate_button"
         style="@style/buttonsStyle"
         android:text="@string/register_candidate" />
-    <Button
-        android:id="@+id/register_citizen_button"
-        style="@style/buttonsStyle"
-        android:text="@string/register_citizen" />
 
 </LinearLayout>

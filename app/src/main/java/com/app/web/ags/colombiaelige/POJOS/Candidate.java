@@ -9,15 +9,13 @@ public class Candidate {
     private String lastname;
     private String politic_party;
     private String imageUrl;
-    private String type;
 
-    public Candidate(String dni, String name, String lastname, String politic_party, String imageUrl, String type) {
+    public Candidate(String dni, String name, String lastname, String politic_party, String imageUrl) {
         this.dni = dni;
         this.name = name;
         this.lastname = lastname;
         this.politic_party = politic_party;
         this.imageUrl = imageUrl;
-        this.type = type;
     }
 
     public String getDni() {
@@ -56,9 +54,6 @@ public class Candidate {
 
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
-    public String getType() { return type; }
-
-    public void setType(String type) { this.type = type; }
 
     public ContentValues toValues() {
         ContentValues contentValues = new ContentValues(6);
@@ -67,7 +62,6 @@ public class Candidate {
         contentValues.put("lastname",lastname);
         contentValues.put("politic_party",politic_party);
         contentValues.put("image",imageUrl);
-        contentValues.put("type",type);
         return contentValues;
     }
 }

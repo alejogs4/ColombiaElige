@@ -11,7 +11,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.app.web.ags.colombiaelige.POJOS.Candidate;
-import com.app.web.ags.colombiaelige.controllers.CandidatesController;
+import com.app.web.ags.colombiaelige.models.CandidatesModel;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,44 +28,15 @@ public class RegisterCandidate extends AppCompatActivity {
 
     private Button registerCandidateButton;
 
-    private Spinner spinner;
-
-    private CandidatesController candidatesController;
-
-    private List<String> candidatesTypes;
-    private ArrayAdapter<String> arrayAdapter;
-    private String type;
-
+    private CandidatesModel candidatesModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_candidate);
         connect();
-        // Llena la lista de tipos de candidatos
-        String types[] = { "Presidencial", "Gobernacion", "Alcalde" };
-        candidatesTypes = new ArrayList<>();
-        Collections.addAll(candidatesTypes,types);
 
-        arrayAdapter = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_spinner_item, candidatesTypes);
-        spinner.setAdapter(arrayAdapter);
-
-        /**
-         * Eventos del boton y spinner
-         */
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                type = candidatesTypes.get(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        candidatesController = new CandidatesController(getApplicationContext());
+        candidatesModel = new CandidatesModel(getApplicationContext());
 
         registerCandidateButton.setOnClickListener(view -> {
             if(areThereAnyEmptyField()) {
@@ -74,9 +45,10 @@ public class RegisterCandidate extends AppCompatActivity {
             }
             try {
                 Candidate candidate = new Candidate(dniField.getText().toString(),nameField.getText().toString(),
-                                                    lastnameField.getText().toString(),politicPartyField.getText().toString(),
-                                                    urlImageField.getText().toString(), type);
-                candidatesController.registryCandidate(candidate);
+                                                    lastnameField.getText().toString(),
+                                                    politicPartyField.getText().toString(),
+                                                    urlImageField.getText().toString());
+                candidatesModel.registryCandidate(candidate);
                 Toast.makeText(getApplicationContext(),"Candidato registrado",Toast.LENGTH_SHORT).show();
             }
             catch (Exception e) {
@@ -92,7 +64,7 @@ public class RegisterCandidate extends AppCompatActivity {
     private boolean areThereAnyEmptyField() {
         return dniField.getText().toString().isEmpty() || nameField.getText().toString().isEmpty() ||
                lastnameField.getText().toString().isEmpty() || politicPartyField.getText().toString().isEmpty() ||
-               urlImageField.getText().toString().isEmpty() || type == null;
+               urlImageField.getText().toString().isEmpty();
     }
 
     private void connect() {
@@ -102,7 +74,6 @@ public class RegisterCandidate extends AppCompatActivity {
         politicPartyField = findViewById(R.id.party_candidate_field);
         urlImageField = findViewById(R.id.image_candidate_field);
 
-        spinner = findViewById(R.id.spinner);
         registerCandidateButton = findViewById(R.id.register_candidate_execute);
     }
 }
